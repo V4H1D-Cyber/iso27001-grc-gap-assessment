@@ -1,0 +1,94 @@
+Control ID,Control Name,Theme,Status,Evidence / Notes,Priority
+5.1,Policies for information security,Organizational,Partial,"An internal wiki page covers acceptable use, but there is no board-approved, versioned Information Security Policy document.",High
+5.2,Information security roles and responsibilities,Organizational,Partial,"CTO is de facto security owner; no formal RACI or documented role assignments exist.",High
+5.3,Segregation of duties,Organizational,Not Implemented,"Same engineer can both write and deploy production code with no independent approval gate.",High
+5.4,Management responsibilities,Organizational,Partial,"Leadership verbally supports security but has not signed off on any security objectives or budget.",Medium
+5.5,Contact with authorities,Organizational,Not Implemented,"No documented point of contact list for law enforcement, CERT-In, or the relevant data protection authority.",Medium
+5.6,Contact with special interest groups,Organizational,Not Implemented,"No membership in ISACs, vendor security mailing lists, or industry threat-sharing groups.",Low
+5.7,Threat intelligence,Organizational,Not Implemented,"No structured threat intel feed consumption; awareness is ad hoc via news and Twitter/X.",Medium
+5.8,Information security in project management,Organizational,Not Implemented,"New product features ship without a security review step in the project lifecycle.",High
+5.9,Inventory of information and other associated assets,Organizational,Partial,"Cloud assets are listed in the AWS console but no consolidated asset register exists.",High
+5.10,Acceptable use of information and other associated assets,Organizational,Implemented,"AUP exists (see policies/Acceptable-Use-Policy.md) and is signed at onboarding.",Low
+5.11,Return of assets,Organizational,Partial,"Laptops are collected on exit but no signed checklist confirms full asset return.",Medium
+5.12,Classification of information,Organizational,Not Implemented,"No data classification scheme (e.g. Public/Internal/Confidential/Restricted) is defined.",High
+5.13,Labelling of information,Organizational,Not Implemented,"Depends on 5.12 being implemented first.",Medium
+5.14,Information transfer,Organizational,Partial,"Customer data is transferred via encrypted API calls, but ad hoc email attachments are still used internally.",Medium
+5.15,Access control,Organizational,Partial,"Role-based access exists in the core app; internal tooling (admin panels, dashboards) uses shared logins.",High
+5.16,Identity management,Organizational,Partial,"Google Workspace SSO covers most SaaS tools; several legacy tools have standalone credentials.",High
+5.17,Authentication information,Organizational,Partial,"Password manager is provided but not mandated; MFA is optional rather than enforced org-wide.",High
+5.18,Access rights,Organizational,Not Implemented,"No periodic access review/recertification process exists; access is granted on request and rarely revisited.",High
+5.19,Information security in supplier relationships,Organizational,Not Implemented,"Vendors (payment processor, cloud host, email provider) were selected without a security due-diligence checklist.",Medium
+5.20,Addressing information security within supplier agreements,Organizational,Not Implemented,"Standard vendor contracts do not include security/data-handling clauses.",Medium
+5.21,Managing information security in the ICT supply chain,Organizational,Not Implemented,"No process for assessing security of upstream open-source dependencies beyond ad hoc `npm audit`.",Medium
+5.22,"Monitoring, review and change management of supplier services",Organizational,Not Implemented,"Vendor security posture is not reassessed after initial onboarding.",Low
+5.23,Information security for use of cloud services,Organizational,Partial,"AWS is used with default security groups reviewed occasionally, but no formal cloud security baseline exists.",High
+5.24,Information security incident management planning and preparation,Organizational,Not Implemented,"No documented incident response plan; response would currently be improvised.",High
+5.25,Assessment and decision on information security events,Organizational,Not Implemented,"No defined severity/triage criteria for security events.",High
+5.26,Response to information security incidents,Organizational,Not Implemented,"See playbooks in this repo as a starting point for remediating this gap.",High
+5.27,Learning from information security incidents,Organizational,Not Implemented,"No post-incident review process exists, as no incidents have been formally logged.",Medium
+5.28,Collection of evidence,Organizational,Not Implemented,"No forensic evidence-handling procedure defined.",Low
+5.29,Information security during disruption,Organizational,Not Implemented,"No business continuity plan addresses security controls during an outage or disaster.",Medium
+5.30,ICT readiness for business continuity,Organizational,Partial,"Daily automated database backups exist; no documented or tested disaster-recovery runbook.",High
+5.31,"Legal, statutory, regulatory and contractual requirements",Organizational,Partial,"Aware of India's DPDP Act obligations in general terms; no formal compliance register maps specific obligations to controls.",High
+5.32,Intellectual property rights,Organizational,Partial,"Employment contracts include an IP assignment clause; no process for tracking third-party licence compliance.",Low
+5.33,Protection of records,Organizational,Partial,"Financial records are retained per accounting requirements; no unified records-retention schedule for security-relevant logs.",Medium
+5.34,Privacy and protection of PII,Organizational,Partial,"Customer PII is encrypted at rest in the primary database; no data protection impact assessment has been performed.",High
+5.35,Independent review of information security,Organizational,Not Implemented,"No internal audit function or third-party security assessment has ever been commissioned.",Medium
+5.36,"Compliance with policies, rules and standards for information security",Organizational,Not Implemented,"No mechanism exists to check that the (currently informal) policies are actually being followed.",Medium
+5.37,Documented operating procedures,Organizational,Partial,"Some runbooks exist in engineering's internal docs, but coverage is inconsistent and none are security-specific.",Medium
+6.1,Screening,People,Partial,"Reference checks are performed for new hires; no formal background-verification vendor is used.",Medium
+6.2,Terms and conditions of employment,People,Implemented,"Standard employment contracts include confidentiality and acceptable-use clauses.",Low
+6.3,"Information security awareness, education and training",People,Not Implemented,"No security awareness training programme exists for new hires or annually.",High
+6.4,Disciplinary process,People,Partial,"General HR disciplinary process exists but does not specifically reference security policy violations.",Low
+6.5,Responsibilities after termination or change of employment,People,Partial,"Access is typically revoked on last day, but there is no checklist to guarantee full de-provisioning across all systems.",High
+6.6,Confidentiality or non-disclosure agreements,People,Implemented,"NDAs are signed by all employees and contractors before system access is granted.",Low
+6.7,Remote working,People,Partial,"Most staff work remotely; no formal remote-working security policy (VPN requirements, home-network expectations) exists.",Medium
+6.8,Information security event reporting,People,Not Implemented,"No clear internal channel or expectation for staff to report suspected security incidents.",High
+7.1,Physical security perimeters,Physical,Not Applicable,"Fully remote company with no owned office premises.",N/A
+7.2,Physical entry,Physical,Not Applicable,"No physical office to control entry to.",N/A
+7.3,"Securing offices, rooms and facilities",Physical,Not Applicable,"Not applicable — remote-first company.",N/A
+7.4,Physical security monitoring,Physical,Not Applicable,"Not applicable — remote-first company.",N/A
+7.5,Protecting against physical and environmental threats,Physical,Partial,"Cloud provider (AWS) handles data-centre-level environmental controls under the shared responsibility model.",Low
+7.6,Working in secure areas,Physical,Not Applicable,"No secure physical areas defined; company is fully remote.",N/A
+7.7,Clear desk and clear screen,Physical,Not Implemented,"No policy exists for remote workers regarding screen locking or physical document handling at home.",Low
+7.8,Equipment siting and protection,Physical,Not Applicable,"Employees use personal/company laptops at home; no shared equipment siting to secure.",N/A
+7.9,Security of assets off-premises,Physical,Partial,"Company laptops have disk encryption enabled by default (BitLocker/FileVault) but this is not centrally verified.",Medium
+7.10,Storage media,Physical,Not Implemented,"No policy governs use of USB drives or removable media.",Low
+7.11,Supporting utilities,Physical,Not Applicable,"Delegated entirely to the cloud provider's data centres.",N/A
+7.12,Cabling security,Physical,Not Applicable,"No owned physical infrastructure.",N/A
+7.13,Equipment maintenance,Physical,Not Applicable,"Company-issued laptops only; no server hardware owned directly.",N/A
+7.14,Secure disposal or re-use of equipment,Physical,Not Implemented,"No documented process for wiping laptops before resale/disposal at end of life.",Medium
+8.1,User endpoint devices,Technological,Partial,"Laptops have antivirus and disk encryption; no centralized device management (MDM) enrolls or enforces this.",High
+8.2,Privileged access rights,Technological,Not Implemented,"Multiple engineers hold standing AWS root/admin access rather than time-boxed elevated access.",High
+8.3,Information access restriction,Technological,Partial,"Application-level RBAC exists for customer data; internal admin tools lack equivalent restriction.",High
+8.4,Access to source code,Technological,Implemented,"Source code is held in a private GitHub organization with branch protection on the main branch.",Low
+8.5,Secure authentication,Technological,Partial,"SSO via Google Workspace covers most tools; MFA is available but not enforced everywhere.",High
+8.6,Capacity management,Technological,Partial,"AWS auto-scaling is configured for the main application tier; no formal capacity-planning review cadence.",Low
+8.7,Protection against malware,Technological,Partial,"Endpoint antivirus is installed; no centralized reporting or alerting on detections.",Medium
+8.8,Management of technical vulnerabilities,Technological,Partial,"Dependabot flags vulnerable dependencies; no formal patch-SLA or process for infrastructure-level CVEs.",High
+8.9,Configuration management,Technological,Partial,"Infrastructure is partly defined in Terraform; some resources were created manually via the AWS console and are undocumented.",Medium
+8.10,Information deletion,Technological,Not Implemented,"No defined process for secure deletion of customer data on account closure, beyond a soft-delete flag.",High
+8.11,Data masking,Technological,Not Implemented,"Production data (including PII) is used unmasked in the staging environment.",High
+8.12,Data leakage prevention,Technological,Not Implemented,"No DLP tooling monitors outbound data transfer from company devices or SaaS tools.",Medium
+8.13,Information backup,Technological,Implemented,"Automated daily database backups with 30-day retention are in place and stored in a separate AWS region.",Low
+8.14,Redundancy of information processing facilities,Technological,Partial,"Database has a standby replica; the application tier has no multi-region failover.",Medium
+8.15,Logging,Technological,Partial,"Application logs are centralized in CloudWatch; authentication and admin-action logs are not consistently captured.",High
+8.16,Monitoring activities,Technological,Not Implemented,"No SIEM or equivalent; nobody is actively reviewing security-relevant logs on a routine basis.",High
+8.17,Clock synchronization,Technological,Implemented,"All servers use AWS's default NTP time sync.",Low
+8.18,Use of privileged utility programs,Technological,Not Implemented,"No restriction or logging on use of admin-level CLI tools/scripts against production.",Medium
+8.19,Installation of software on operational systems,Technological,Not Implemented,"Engineers can install arbitrary software on their own laptops with no approval gate.",Low
+8.20,Networks security,Technological,Partial,"VPC security groups restrict most inbound traffic; a few legacy rules are overly permissive and undocumented.",High
+8.21,Security of network services,Technological,Partial,"TLS is enforced on all customer-facing endpoints; some internal services use plain HTTP.",Medium
+8.22,Segregation of networks,Technological,Partial,"Production and staging run in separate AWS accounts; there is no further internal network segmentation within production.",Medium
+8.23,Web filtering,Technological,Not Implemented,"No web-filtering or DNS-based protection is applied to company devices.",Low
+8.24,Use of cryptography,Technological,Partial,"Data is encrypted in transit (TLS) and at rest (AWS-managed keys); no documented key-management or rotation policy.",Medium
+8.25,Secure development life cycle,Technological,Not Implemented,"No formal SDLC security gates exist; security is not a defined stage in the sprint process.",High
+8.26,Application security requirements,Technological,Not Implemented,"New features are specified functionally with no accompanying security requirements.",Medium
+8.27,Secure system architecture and engineering principles,Technological,Partial,"Architecture reviews happen informally for major changes; no documented secure-architecture principles to review against.",Medium
+8.28,Secure coding,Technological,Not Implemented,"No secure-coding standard or training exists for the engineering team; code review focuses on functionality, not security.",High
+8.29,Security testing in development and acceptance,Technological,Not Implemented,"No SAST/DAST tooling runs in CI; this repo's own HawkScan-style DAST loop is a candidate to close this gap.",High
+8.30,Outsourced development,Technological,Not Applicable,"All development is performed in-house; no outsourced/contracted development is used.",N/A
+8.31,"Separation of development, test and production environments",Technological,Implemented,"Dev, staging, and production run in fully separate AWS accounts with separate credentials.",Low
+8.32,Change management,Technological,Partial,"All changes go through pull requests, but there is no formal change-advisory process for high-risk production changes.",Medium
+8.33,Test information,Technological,Not Implemented,"See 8.11 — unmasked production data is used directly in test/staging environments.",High
+8.34,Protection of information systems during audit testing,Technological,Not Implemented,"No audit-testing procedure exists yet, since no formal audits have been conducted.",Low
