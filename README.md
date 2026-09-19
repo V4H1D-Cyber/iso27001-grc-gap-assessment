@@ -34,9 +34,15 @@ This distribution is intentional and realistic: most early-stage companies have 
 | `iso27001-gap-assessment.csv` | All 93 Annex A controls, status, and evidence/notes |
 | `risk-register.csv` | 12 risks derived from the highest-impact gaps, scored and mapped to controls |
 | `remediation-roadmap.md` | Prioritized 30/60/90-day remediation plan |
+| `nist-csf-mapping.md` | Crosswalk of the assessment onto NIST CSF 2.0 (Govern/Identify/Protect/Detect/Respond/Recover) — the same risks viewed through a second framework |
+| `sample-audit-finding-report.md` | The top 3 risks written up as formal audit findings (Condition/Criteria/Cause/Effect/Recommendation) — the report-writing layer on top of the raw assessment |
 | `policies/Acceptable-Use-Policy.md` | Sample AUP (Annex A 5.10) |
 | `policies/Access-Control-Policy.md` | Sample access control policy (Annex A 5.15-5.18, 8.2, 8.5) |
 | `policies/Incident-Response-Policy.md` | Sample incident response policy (Annex A 5.24-5.28, 6.8), cross-referenced to the SOC playbooks in my detection-engineering lab |
+
+## Why the NIST CSF mapping and audit report were added
+
+The original gap assessment proves I can evaluate controls; it doesn't on its own prove I can (a) translate findings across frameworks, which is ordinary work when an organization runs ISO 27001 for certification but reports risk internally against NIST CSF, or (b) write up a finding the way an auditor delivers it to a client — condition, criteria, cause, effect, recommendation — rather than as a spreadsheet row. Both gaps are common ones for a portfolio built entirely from checklists, so I closed them here with the same no-shortcuts approach as the rest of this project.
 
 ## Author
 
